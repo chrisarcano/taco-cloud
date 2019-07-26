@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-public class Design {
+public class Taco {
 	private Long id;
 	@NotNull
 	@Size(min=5, message="Name must be at least 5 characters long")

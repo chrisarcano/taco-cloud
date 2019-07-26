@@ -1,9 +1,9 @@
 package tacos.data;
 
-import tacos.Design;
+import tacos.Taco;
 
 public interface TacoRepository {
-	Design save(Design design);
+	Taco save(Taco design);
 
-	Iterable<Design> findAll();
+	Iterable<Taco> findAll();
 }

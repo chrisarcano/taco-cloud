@@ -8,8 +8,8 @@
 </head>
 <body>
 	<h1>Design your taco!</h1>
-	<img th:src="@{/images/TacoCloud.jpg}" />
-	<form method="POST" th:object="${design}">
+	<img class="logo" th:src="@{/images/TacoCloud.jpg}" />
+	<form method="POST" th:object="${taco}">
 		<div class="gid">
 			<div class="ingredient-group" id="wraps">
 				<h3>Designate your wrap:</h3>
@@ -48,7 +48,7 @@
 			</div>
 			<h3>Name your taco creation:</h3>
 			<input type="text" th:field="*{name}" />
-			<button>Submit your taco</button>
+			<button>Add your taco to cart</button>
 		</div>
 	</form>
 </body>
