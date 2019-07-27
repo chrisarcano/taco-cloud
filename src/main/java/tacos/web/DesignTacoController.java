@@ -22,6 +22,8 @@ import tacos.Ingredient;
 import tacos.Ingredient.Type;
 import tacos.Order;
 import tacos.data.IngredientRepository;
+import tacos.data.JpaIngredientRepository;
+import tacos.data.JpaTacoRepository;
 import tacos.data.TacoRepository;
 
 @Slf4j
@@ -29,8 +31,8 @@ import tacos.data.TacoRepository;
 @RequestMapping("/taco")
 @SessionAttributes("order")
 public class DesignTacoController {
-	private final IngredientRepository ingredientRepository;
-	private final TacoRepository tacoRepository;
+	private final JpaIngredientRepository ingredientRepository;
+	private final JpaTacoRepository tacoRepository;
 	
 	@ModelAttribute(name = "order")
 	public Order order() {
@@ -41,7 +43,7 @@ public class DesignTacoController {
 		return new Taco();
 	}
 	@Autowired
-	public DesignTacoController(IngredientRepository ingredientRepository, TacoRepository tacoRepository) {
+	public DesignTacoController(JpaIngredientRepository ingredientRepository, JpaTacoRepository tacoRepository) {
 		this.ingredientRepository = ingredientRepository;
 		this.tacoRepository = tacoRepository;
 	}

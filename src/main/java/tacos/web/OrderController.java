@@ -15,6 +15,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import lombok.extern.slf4j.Slf4j;
 import tacos.Order;
+import tacos.data.JpaOrderRepository;
 import tacos.data.OrderRepository;
 import tacos.data.TacoRepository;
 
@@ -23,9 +24,9 @@ import tacos.data.TacoRepository;
 @RequestMapping("/orders")
 @SessionAttributes("order")
 public class OrderController {
-	private OrderRepository orderRepository;
+	private JpaOrderRepository orderRepository;
 	@Autowired
-	public OrderController(TacoRepository tacoRepository, OrderRepository orderRepository) {
+	public OrderController(JpaOrderRepository orderRepository) {
 		this.orderRepository = orderRepository;
 	}
 	@GetMapping("/current")
