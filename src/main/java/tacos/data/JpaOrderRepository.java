@@ -11,6 +11,6 @@ import tacos.Order;
 public interface JpaOrderRepository extends CrudRepository<Order, Long>{
 	List<Order> findByDeliveryZip(String deliveryZip);
 	List<Order> readOrderByDeliveryZipAndPlacedAtBetween(String deliveryZip, Date startDate, Date endDate);
-	@Query("Order o where o.deliveryCity='Seattle'")
-	List<Order> readOrdersDeliveredInSeattle();
+	/*@Query("Taco_Order o where o.deliveryCity='Seattle'")
+	List<Order> readOrdersDeliveredInSeattle();*/
 }
